@@ -1,0 +1,19 @@
+{
+    "manifest": 1,
+    "slug": "quizora-gradebook",
+    "name": "Gradebook",
+    "description": "A gradebook for every creator: each student's best score on each quiz in one colour-coded grid, class averages, CSV export, and a printable report card to share with any student.",
+    "version": "1.0.0",
+    "product": "quizora",
+    "requires": { "product": "^1.5", "licentra": "^1.5" },
+    "namespace": "Modules\\QuizoraGradebook\\",
+    "provider": "Modules\\QuizoraGradebook\\ModuleServiceProvider",
+    "envato_item_id": null,
+    "plan_feature": false,
+    "capabilities": {
+        "tables": ["quizora_gradebook_report_cards"],
+        "outbound": [],
+        "routes": ["GET /quizora-gradebook/report/{token}"],
+        "schedule": false
+    }
+}
