@@ -18,7 +18,7 @@ use Pacific\Licentra\Modules\Laravel\ModuleLoader;
 use Tests\TestCase;
 
 /**
- * Runs inside Quizora:  php artisan test ../quizora-gradebook/tests/GradebookModuleTest.php
+ * Runs inside Quizora:  php artisan test ../licentra/modules/quizora-gradebook/tests/GradebookModuleTest.php
  * The module is loaded in developer mode from a scratch folder (never your real modules-dev/).
  */
 class GradebookModuleTest extends TestCase

@@ -23,10 +23,10 @@ Needs Quizora 1.5+. Free for every creator (`plan_feature: false`).
 
 ```bash
 # Quizora .env: LICENTRA_MODULES_DEV=true, then php artisan config:clear
-ln -s ~/Sites/gitlab/quizora-gradebook ~/Sites/gitlab/Quizora/modules-dev/quizora-gradebook
+ln -s ~/Sites/gitlab/licentra/modules/quizora-gradebook ~/Sites/gitlab/Quizora/modules-dev/quizora-gradebook
 cd ~/Sites/gitlab/Quizora
 php artisan module:migrate quizora-gradebook     # table + publishes public/*.css
-php artisan test ../quizora-gradebook/tests/GradebookModuleTest.php
+php artisan test ../licentra/modules/quizora-gradebook/tests/GradebookModuleTest.php
 ```
 
 After changing a file in `public/`, run `module:migrate` again to republish it.
@@ -35,7 +35,7 @@ After changing a file in `public/`, run `module:migrate` again to republish it.
 
 ```bash
 mkdir -p ~/Releases && cd ~/Releases
-php ~/Sites/gitlab/Quizora/vendor/pacific/licentra-client/bin/licentra-release module ~/Sites/gitlab/quizora-gradebook --upload
+php ~/Sites/gitlab/Quizora/vendor/pacific/licentra-client/bin/licentra-release module ~/Sites/gitlab/licentra/modules/quizora-gradebook --upload
 ```
 
 Then publish it in Licentra: **Admin → Releases**. The first release also needs the add-on product: **Admin → Products → New**, slug `quizora-gradebook`, *Add-on for* Quizora, pricing *Free*. The Licentra **Team Handbook** has the full steps.
